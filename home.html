@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trety</title>
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- custom font awesome  -->
+    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.css">
+</head>
+<body>
+<!-- start of header -->
+<header id="top">
+    <div class="logo">
+        <a href="home.html">Trety</a>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="bookonline.html">BOOKONLINE</a></li>
+            <li><a href="contacts.html">CONTACT</a></li>
+            <li><button class="popUpBtn">LOG IN</button></li>
+            <li><button class="signUpBtn">SIGN UP</button></li>
+    </nav>
+</header>
+<!-- start of main  -->
+<main class="main">
+    <div class="phone">
+        <i class="fas fa-phone"></i>
+        <p>Call us +254768723231</p>
+    </div>
+    <div class="popUp">
+        <div class="closeBtn">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <form action="/" method="post">
+                <div class="formElement" id="element">
+                    <label for="email">Email Address:</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="email" required> 
+                </div>
+                <div class="formElement" id="elementTwo">
+                    <label for="psw">Password:</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="psw" id="psw" required>
+                </div>
+                <div class="formElement">
+                    <input type="checkbox" name="rememberMe" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <div class="formElement">
+                    <button class="btnTwo" type="submit"><span>Log in</span></button>
+                </div>
+                <div class="formElement">
+                    <a href="#">Forget password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+<!-- start of sign up pop-up  -->
+<div class="signupPopup">
+<div class="closeBtnTwo">&times;</div>
+    <form action="" method="post">
+        <h1>Registration</h1>
+        <div class="inputBox">
+            <div class="inputField">
+                <input type="text" name="text" placeholder="Full Name" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="inputField">
+                <input type="password" name="psw" placeholder="Password" 
+                required>
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+        
+        <div class="inputBox">
+            <div class="inputField">
+                <input type="email" name="email" placeholder="Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="inputField">
+                <input type="password" name="psw" placeholder="Confirm password" required>
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <div class="inputField">
+                <input type="tel" name="tel" placeholder="Phone number" required>
+                <i class="fas fa-phone"></i>
+            </div>
+        </div>
+        <label><input type="checkbox" name="checkbox">I hereby declare that the above iformation provided is true and correct</label>
+        <button class="btnTwo" type="submit">Sign up</button>
+    </form>
+</div>
+
+    <div class="comment">
+        <h1>STUNNING 6 BED HOUSE IN THE HEART OF THE CITY</h1>
+        <p>Finding the perfect house rental, welcome to trety company where comfort meets convenience and create a home that echoes your dreams.</p><hr>
+        <div class="btn">
+            <a href="bookonline.html">READ MORE</a>
+        </div>
+    </div>
+</main>
+<!-- start of properties secttion  -->
+<section class="propertiesSection">
+    <h1>LATEST PROPERTIES FOR SALE</h1>
+    <div class="propertyCard">
+        <!-- a property iamge  -->
+        <img src="img/property1.jpg" alt="house">
+
+        <div class="details">
+            <h2>CALYPSO AVENUE</h2>
+            <p>KSHs 2.4m</p>
+            <h3>4 bedrooms</h3>
+            <p class="paragraphs"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae odio a quidem nisi amet eligendi ipsum illo. Obcaecati officia deserunt voluptatum mollitia magnam earum. Laudantium pariatur itaque necessitatibus illum. In.</p>
+            <div class="btn">
+                <a href="bookonline.html">READ MORE</a>
+            </div>
+        </div>
+    </div>
+    <div class="propertyCard">
+        <!-- a house image  -->
+        <img src="img/property2.jpg" alt="house">
+
+        <div class="details">
+            <h2>LANCHESTER WAY</h2>
+            <p>KSHs 7.5m</p>
+            <h3>6 bedrooms</h3>
+            <p class="paragraphs"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae odio a quidem nisi amet eligendi ipsum illo. Obcaecati officia deserunt voluptatum mollitia magnam earum. Laudantium pariatur itaque necessitatibus illum. In.</p>
+            <div class="btn">
+                <a href="bookonline.html">READ MORE</a>
+            </div>
+        </div>
+    </div>
+    <div class="propertyCard">
+        <!-- a house image  -->
+        <img src="img/property3.jpg" alt="house">
+
+        <div class="details">
+            <h2>WOOD STREET</h2>
+            <p>KSHs 10.2m</p>
+            <h3>10 bedrooms</h3>
+            <p class="paragraphs"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae odio a quidem nisi amet eligendi ipsum illo. Obcaecati officia deserunt voluptatum mollitia magnam earum. Laudantium pariatur itaque necessitatibus illum. In.</p>
+            <div class="btn">
+                <a href="bookonline.html">READ MORE</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- start of rental properties  -->
+<section class="rental">
+    <h1>LATEST RENTAL PROPERTIES</h1>
+        <div class="court">
+            <div id="img">
+                <img src="img/rental1.jpg" alt="house">
+            </div>
+            <div class="contex">
+                <h2>TRANQUIL AVENUE</h2>
+                <h3>4 bedrooms</h3>
+                <p class="statements">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro incidunt reiciendis dolorem molestias labore tempore. Sint, sunt, accusantium vero illum vel adipisci neque, delectus eum veniam quaerat aperiam. Exercitationem, distinctio?</p>
+                <p class="price">KSHs 100k per month</p>
+            </div>
+        </div>
+        <div class="courtTwo">
+            <div class="contexTwo">
+                <h2>CARAMEL KISS</h2>
+                <h3>2 bedrooms</h3>
+                <p class="statements">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro incidunt reiciendis dolorem molestias labore tempore. Sint, sunt, accusantium vero illum vel adipisci neque, delectus eum veniam quaerat aperiam. Exercitationem, distinctio?</p>
+                <p class="price">KSHs 45k per month</p>
+            </div>
+            <!-- a house image  -->
+            <img src="img/rental2.jpg" alt="house">
+        </div>
+</section>
+<!-- start of essay section  -->
+<section class="essay">
+    <h1>WELCOME TO TRETY RENTAL AND PROPERTY COMPANY</h1>
+    <p>Dear Valued Clients and Guests, we are thrilled to welcome you to <span>TRETY Rental and Properties</span> where your search for the perfect home or property ends and a world of possibilities begins! At <span>TRETY</span>, we understand that a property is not just a structure; it's a place where memories are created, dreams are nurtured and lives are lived to the fullest.What sets <span>TRETY </span> apart is not just our listings, but our unwavering dedication to customer satisfaction. We prioritize your comfort, convenience and happiness above all else. Our team is always ready to listen, understand your requirements and work tirelessly to find the property that feels like home.</p> <br>
+    <p>As you explore our website or visit our offices, please feel free to reach out to our friendly staff. We are here to answer your questions, provide expert advice and make your property search experience as smooth and enjoyable as possible. Thank you for choosing <span>TRETY</span> Rental and Properties. We are honored to be a part of your journey and we look forward to helping you find the perfect place to call home.</p>
+</section>
+<!-- start of clients thought -->
+<section class="thoughts">
+    <h1>WHAT OUR CLIENT THINKS</h1>
+   <div class="message">
+        <div class="client">
+            <i class="fas fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid amet at atque reiciendis non.</p>
+            <h5>-kennedy kamau</h5>
+        </div>
+        <div class="client">
+            <i class="fas fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid amet at atque reiciendis non.?</p>
+            <h5>-Riah & Patterson</h5>
+        </div>
+        <div class="client">
+            <i class="fas fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid amet at atque reiciendis non.</p>
+            <h5>-Talia Oyando</h5>
+        </div>
+   </div>
+</section>
+<!-- start of footer  -->
+<footer class="footer">
+    <div class="top">
+        <a href="#top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <h1>Come visit us!</h1>
+    <h2>We prioritize your comfort, convenience and happiness above all else</h2>
+    <div class="contacts">
+        <div class="email">
+            <i class="fas fa-envelope"></i>
+            <p>tretycompany@mysite.com<br>trety@mysite.com</p>
+        </div>
+        <div class="location">
+            <i class="fas fa-map-marker"></i>
+            <p>254 Kenya, Mombasa<br>Bamburi Streets</p>
+        </div>
+        <div class="phone">
+            <i class="fas fa-phone"></i>
+            <p>Tel 0712345678<br>Tel 0798765432</p>
+        </div>
+    </div>
+    <div class="icons">
+        <a href="/"><i class="fab fa-facebook"></i></a>
+        <a href="/"><i class="fab fa-twitter"></i></a>
+        <a href="/"><i class="fab fa-instagram"></i></a>
+    </div>
+    <hr>
+    <div class="last">
+        <p><small>&copy;2023 Copyrights Ken Kamau - All right reserved</small></p>
+    </div>
+</footer>
+<!-- custom js  -->
+        <script src="script.js"></script>
+</body>
+</html>

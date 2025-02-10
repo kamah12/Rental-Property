@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trety</title>
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- custom font awesome  -->
+    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.css">
+</head>
+<body>
+<!-- start of header -->
+<header id="top">
+    <div class="logo">
+        <a href="home.html">Trety</a>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="bookonline.html">BOOKONLINE</a></li>
+            <li><a href="contacts.html">CONTACT</a></li>
+            <li><button class="popUpBtn">LOG IN</button></li>
+            <li><button class="signUpBtn">SIGN UP</button></li>
+
+    </nav>
+</header>
+<!-- start of main section  -->
+<main class="info">
+    <div class="popUp">
+        <div class="closeBtn">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <form action="/" method="post">
+                <div class="formElement" id="element">
+                    <label for="email">Email Address:</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="email" required> 
+                </div>
+                <div class="formElement" id="elementTwo">
+                    <label for="psw">Password:</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="psw" id="psw" required>
+                </div>
+                <div class="formElement">
+                    <input type="checkbox" name="rememberMe" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <div class="formElement">
+                    <button class="btnTwo" type="submit"><span>Log in</span></button>
+                </div>
+                <div class="formElement">
+                    <a href="#">Forget password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- start of sign up pop-up  -->
+<div class="signupPopup">
+<div class="closeBtnTwo">&times;</div>
+    <form action="" method="post">
+        <h1>Registration</h1>
+        <div class="inputBox">
+            <div class="inputField">
+                <input type="text" name="text" placeholder="Full Name" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="inputField">
+                <input type="password" name="psw" placeholder="Password" 
+                required>
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+        
+        <div class="inputBox">
+            <div class="inputField">
+                <input type="email" name="email" placeholder="Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="inputField">
+                <input type="password" name="psw" placeholder="Confirm password" required>
+                <i class="fas fa-lock"></i>
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <div class="inputField">
+                <input type="number" name="number" placeholder="Phone number" required>
+                <i class="fas fa-phone"></i>
+            </div>
+        </div>
+        <label><input type="checkbox">I hereby declare that the above iformation provided is true and correct</label>
+        <button class="btnTwo" type="submit">Sign up</button>
+    </form>
+</div>
+
+    <!-- the contact section  -->
+   <div class="container">
+        <div class="contactInfo">
+            <h1>Contact</h1>
+            <p class="par"><strong>Trety Rental & Propeties</strong><br>Bamburi, Mombasa<br>MSA County 001</p>
+            <p class="para">Email: tretycompany@mysite.com<br>Tel: 0768723231</p>
+        </div>
+        <div class="contactForm">
+            <h2>ALTERNATIVELY YOU CAN FILL IN THE FOLLOWING CONTACT FORM:</h2>
+            <form action="" method="POST">
+                <div class="name">
+                    <input type="text" name="name" placeholder="name" required>
+                </div>
+                <div class="email">
+                    <input type="email" name="email" placeholder="email" required>
+                </div>
+                <div class="phone">
+                    <input type="number" name="number" placeholder="Phone number" required>
+                </div>
+                <div class="typeMessage">
+                    <textarea name="message" id="message" cols="84" rows="7" placeholder="type your message here" required></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<!-- start of google map  -->
+<section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27879.718692921186!2d39.69885991241267!3d-3.9963873073957696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18400d67d787eba7%3A0x9a372725f4e70b80!2sOne%20World%20Apartments%20Mombasa!5e0!3m2!1sen!2ske!4v1697462924641!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<!-- start of footer  -->
+<footer class="footer">
+    <div class="top">
+        <a href="#top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <h1>Come visit us!</h1>
+    <h2>We prioritize your comfort, convenience and happiness above all else</h2>
+    <div class="contacts">
+        <div class="email">
+            <i class="fas fa-envelope"></i>
+            <p>tretycompany@mysite.com<br>trety@mysite.com</p>
+        </div>
+        <div class="location">
+            <i class="fas fa-map-marker"></i>
+            <p>254 Kenya, Mombasa<br>Bamburi Streets</p>
+        </div>
+        <div class="phone">
+            <i class="fas fa-phone"></i>
+            <p>Tel 0712345678<br>Tel 0798765432</p>
+        </div>
+    </div>
+    <div class="icons">
+        <a href="/"><i class="fab fa-facebook"></i></a>
+        <a href="/"><i class="fab fa-twitter"></i></a>
+        <a href="/"><i class="fab fa-instagram"></i></a>
+    </div>
+    <hr>
+    <div class="last">
+        <p><small>&copy;2023 Copyrights Ken Kamau - All right reserved</small></p>
+    </div>
+</footer>
+<!-- custom js  -->
+    <script src="script.js"></script>
+</body>
+</html>

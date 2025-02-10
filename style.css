@@ -1,0 +1,768 @@
+:root{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+/* css reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+/* base style  */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.5rem 0;
+    background-color: #f9f9f9;
+}
+.logo a{
+    color: #012a4a;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+}
+.nav ul{
+   display: flex;
+}
+.nav ul li{
+    list-style-type: none;
+    margin-left: 3rem;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #012a4a;
+    font-size: 13px;
+    font-weight: 600;
+}
+.nav ul li button{
+   border: none;
+   background: none;
+   color: #012a4a;
+   font-size: 13px;
+   cursor: pointer;
+   font-weight: 600;
+}
+.nav ul li a:hover,
+.nav ul li button:hover{
+    color: #7d8597;
+}
+.main .btn a:hover, .details .btn a:hover,.rentalInfo .description .bookBtn:hover{
+    opacity: 0.5;
+}
+.propertiesSection h1, .rental h1, .essay h1{
+    color: #012a4a;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.details h3, .contex h3, .contexTwo h3{
+    color: burlywood;
+    font-weight: 200;
+    padding: 25px 0;
+}
+.btnTwo{
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #012a4a;
+    color: #f9f9f9;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: transform 0.5s ease;
+}
+.btnTwo:hover{
+    background: burlywood;
+    color: #000;
+}
+.btnTwo:focus{
+    transform: translateY(-9%);
+}
+.closeBtn, .closeBtnTwo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    background: #012a4a;
+    text-align: center;
+    color: #f9f9f9;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+.info .popUp, .info .signupPopup, .bookOnline .popUp, .bookOnline .signupPopup{
+    top: 25%;
+}
+::placeholder{
+    color: #9c9b9b;
+}
+
+/* styling the main  */
+.main{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background-image: url(img/room1.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: scroll;
+}
+.main .phone{
+    position: absolute;
+    display: flex;
+    color: #f9f9f9;
+    background: #012a4a;
+    right: 10rem;
+    padding: 20px;  
+}
+.main .phone i{
+    margin-right: 7px;
+}
+.popUp{
+    position: absolute;
+    width: 500px;
+    background: #f9f9f9;
+    padding: 20px 30px;
+    top: 10%;
+    left: 35%;
+    visibility: hidden;
+    z-index: 100;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.7);
+    transform: scale(0);
+    transition: top 0ms ease-in-out 350ms,
+                transform 30ms ease-in-out 0ms;
+    overflow: hidden;
+}
+.active{
+    visibility: visible;
+    transform: translate(0, -18%) scale(1);
+    transition: top 0ms ease-in-out 350ms,
+                transform 30ms ease-in-out 0ms;
+}
+.popUp .form h2{
+    text-align: center;
+    color: #012a4a;
+    margin: 10px 0 20px;
+}
+.popUp .form .formElement{
+    position: relative;
+    margin: 15px 0;
+}
+.popUp .form #element, .popUp .form #elementTwo{
+    border-bottom: 2px solid #162938;
+
+}
+.popUp .form .formElement label{
+    font-size: 15px;
+    color: #1b1b1b;
+    pointer-events: none;
+    font-weight: 500;
+}
+.popUp .form .formElement .fa-envelope, .popUp .form .formElement .fa-lock{
+    position: absolute;
+    right: 8px;
+    color: #012a4a;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+.popUp .form .formElement input[type="email"],
+.popUp .form .formElement input[type="password"]{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 1em;
+    outline: none;
+} 
+.popUp .form .formElement input[type="checkbox"] {
+    margin-right: 5px;
+}
+.popUp .form .formElement a {
+    display: block;
+    text-decoration: none;
+    color: #1a79ca;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 600;
+}
+.popUp .form .formElement a:hover{
+    text-decoration: underline;
+}
+/* styling the sign up pop-up  */
+.signupPopup{
+    position: absolute;
+    top: 14%;
+    left: 20%;
+    width: 750px;
+    padding: 40px 35px 55px;
+    margin: 0 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    color: #012a4a;
+    z-index: 100;
+    overflow: hidden;
+    visibility: hidden;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.7);
+    transform: scale(0);
+    transition: top 0ms ease-in-out 350ms,
+                transform 30ms ease-in-out 0ms;
+}
+.activeTwo{
+    visibility: visible;
+    transform: translate(0, -18%) scale(1);
+    transition: top 0ms ease-in-out 350ms,
+                transform 30ms ease-in-out 0ms;
+}
+.signupPopup h1{
+    font-size: 36px;
+    text-align: center;
+    padding: 12px 0 20px;
+}
+.signupPopup .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.signupPopup .inputBox .inputField{
+    position: relative;
+    width: 48%;
+    margin: 13px 0;
+}
+.signupPopup .inputBox .inputField input{
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    background: transparent;
+    border: 2px solid rgba(1, 42, 74, .4);
+    outline: none;
+    font-size: 16px;
+    border-radius: 6px;
+}
+.signupPopup .inputBox .inputField i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.signupPopup label{
+    display: inline-block;
+    font-size: 14.5px;
+    margin: 10px 0 23px;
+}
+.signupPopup label input{
+    accent-color: #012a4a;
+    margin-right: 5px;
+}
+.main .comment{
+    position: absolute;
+    top: 50%;
+    width: 350px;
+    left: 15rem;
+    background: rgba(1, 42, 74, 0.8);
+    padding: 40px 25px;
+}
+.main .comment h1{
+    color: #f9f9f9;
+}
+.main .comment p{
+    padding: 20px 0;
+    color: #f9f9f9;
+    line-height: 1.8;
+}
+.main .comment hr{
+    border: 1px solid #f9f9f9;
+    background-color: #f9f9f9;
+
+}
+.main .btn{
+    margin-top: 50px;
+    text-align: center;
+}
+.main .btn a{
+    text-decoration: none;
+    color: #f9f9f9;
+    background: transparent;
+    border: 2px solid #f9f9f9;
+    padding: 15px 45px;
+}
+/* start of properties section  */
+.propertiesSection{
+    max-width: 960px;
+    margin: auto;
+    padding: 13rem 0 3rem;
+}
+.propertyCard{
+    display: inline-block;
+    width: 300px;
+    overflow: hidden;
+    margin-left: 1rem;
+}
+.propertyCard img{
+    width: 350px;
+    height: 330px;
+}
+.details h2{
+    color: #012a4a;
+    padding: 18px 0;
+    font-size: 1em;
+}
+.details p{
+    color: #012a4a;
+}
+.details .paragraphs{
+    color: gray;
+    line-height: 1.5;
+}
+.details .btn{
+    padding: 4rem 0;
+}
+.details .btn a{
+    text-decoration: none;
+    color: #012a4a;
+    background: transparent;
+    border: 2px solid #012a4a;
+    padding: 15px 45px;
+    font-size: 13px;
+}
+/* starting of rental property  */
+.rental h1{
+    padding-bottom: 3rem;
+}
+.rental .court{
+    position: relative;
+    background: #012a4a;
+    width: 100%;
+    height: 60vh;
+}
+.rental .court #img{
+    position: absolute;
+    top: -10%;
+    left: 20%;
+}
+.rental .court img, .courtTwo img{
+    width: 320px;
+    height: 350px;
+}
+.rental .contex{
+    position: absolute;
+    left: 48%;
+    padding-right: 24rem;
+}
+.rental .contex h2, .contexTwo h2{
+    padding-top: 50px;
+    color: #f9f9f9;
+    font-size: 1.2em;
+
+}
+.rental .contex .statements, .contexTwo .statements{
+    color: #7d8597;
+    line-height: 1.5;
+}
+.rental .contex .price, .contexTwo .price{
+    padding-top: 15px;
+    color: #1a8adf;
+    font-weight: bolder;
+}
+.rental .courtTwo{
+    position: relative;
+    background: #013055;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    padding: 5rem 18rem 0.3rem 20rem;
+}
+/* start of essay  */
+.essay{
+    max-width: 780px;
+    padding: 50px 0;
+    margin: 30px auto;
+
+}
+.essay h1{
+    margin-bottom: 25px;
+}
+.essay span{
+    color: #012a4a;
+    font-weight: 800;
+    font-style: italic;
+}
+.essay p{
+    text-align: center;
+    line-height: 1.8;
+    font-size: 15px;
+    color: gray;
+}
+/* start of clients thought  */
+.thoughts{
+    width: 100%;
+    height: 70vh;
+    background-image:  linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),   url(img/property3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 4rem;
+}
+.thoughts h1{
+    color: #f9f9f9;
+    text-align: center;
+    padding: 50px 0;
+}
+.thoughts .message{
+    display: flex;
+    width: 960px;
+    margin: auto;
+    gap: 30px;
+}
+.message .client i,
+.message .client h5{
+    color: burlywood;
+    font-weight: 700;
+}
+.message .client p{
+    color: #f9f9f9;
+    padding: 40px 0;
+    font-weight: 700;
+}
+/* start of footer */
+.footer{
+    width: 100%;
+    background: #012a4a;
+    /* text-align: center; */
+
+}
+.footer .top{
+    text-align: right;
+    padding: 20px 30px;
+}
+.footer .top a{
+    text-decoration: none;
+    background: #f9f9f9;
+    color: #013055;
+    padding: 8px;
+    font-size: 1.8em;
+    border-radius: 100%;
+}
+
+.footer h1{
+    text-align: center;
+    color: #f9f9f9;
+    padding: 40px 0;
+}
+.footer h2{
+    color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.footer .contacts{
+    display: flex;
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    gap: 20px;
+}
+.footer .contacts .fas{
+     font-size: 2rem;
+     color: burlywood;
+     padding: 0 1rem;
+} 
+.footer .contacts p{
+    float: right;
+    color: #f9f9f9;
+}
+.footer .icons{
+    padding: 40px 0;
+    text-align: center;
+}
+.footer .icons i{
+     padding: 0 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: burlywood; 
+}
+.footer .fa-facebook:hover{
+    color: blue;
+}
+.footer .fa-twitter:hover{
+    color: dodgerblue;
+}
+.footer .fa-instagram:hover{
+    color: rgb(243, 146, 146);
+}
+.footer hr{
+    width: 100%;
+    border: 0.5px solid #f9f9f9;
+}
+.footer .last{
+    color: #f9f9f9;
+    text-align: center;
+    padding: 5px;
+}
+/* styling contact page  */
+.info{
+    width: 100%;
+    height: 80vh;
+    background: #f9f9f9;
+}
+.container{
+    max-width: 960px;
+    padding: 5rem 0;
+    margin: auto;
+    display: flex;
+    gap: 115px;
+}
+.info .contactInfo h1{
+    color: #012a4a;
+    border-bottom: 8px solid burlywood;
+    width: 62px;
+
+}
+.info .contactInfo .par{
+    padding: 30px 0;
+    color: #012a4a;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.info .contactInfo .par strong{
+    font-size: 25px;
+}
+.info .contactInfo .para{
+    color: #012a4a;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.info .contactForm h2{
+    color: #012a4a;
+    margin-bottom: 18px;
+}
+.info .contactForm input[type="text"], .contactForm input[type="email"], .contactForm
+input[type="number"]{
+    width: 600px;
+    background: #012a4a;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    color: #f9f9f9;
+}
+.info #message{
+    background: #012a4a;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    color: #f9f9f9;
+    outline: none;
+}
+.info .contactForm .submit{
+    float: right;
+    margin-top: 10px;
+    margin-right: 22px;
+}
+.info .contactForm .submit input[type="submit"]{
+    background: #012a4a;
+    padding: 4px 50px;
+    border: none;
+    outline: none;
+    color: #f9f9f9;
+}
+/* start of google map  */
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    padding-bottom: 5rem;
+}
+.map iframe{
+    width: 80%;
+    height: 500px;
+}
+/* start of book online page  */
+.bookOnline{
+    background: #f9f9f9;
+
+}
+.bookOnline .bookRental{
+   max-width: 1100px;
+   margin: auto;
+   padding: 40px 20px 100px;
+}
+.bookRental .rentalInfo{
+    display: inline-block;
+    width: 300px;
+    border: 1px solid #7aaed6;
+    margin-left: 2.2em;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.bookRental .rentalInfo img{
+    width: 300px;
+    height: 250px;
+}
+.rentalInfo .description{
+    padding: 30px 0 50px;
+    text-align: center;
+    color: #012a4a;
+}
+.rentalInfo .description p{
+    padding: 25px 0;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.rentalInfo .description .bookBtn {
+   text-decoration: none;
+   background: #012a4a;
+   padding: 13px 70px;
+   color: #f9f9f9;
+   font-size: 15px;
+}
+
+/* start of media querry  */
+@media screen and (max-width: 960px) {
+    .info {
+        height: 100%;
+    }
+    .container {
+        flex-direction: column;
+        gap: 0;
+        margin-left: 8rem;
+    }
+    .contactForm h2{
+        margin-top: 30px;
+        width: 80%;
+    }
+    .container .submit{
+        transform: translateX(-136.8%);
+    }
+    .container .contactForm input[type="text"],
+    .container .contactForm input[type="email"],
+    .container .contactForm input[type="number"] {
+        width: 73.7%;
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    .rental .court,
+    .rental .courtTwo {
+        padding: 3rem;
+    }
+    .rental .contex {
+        padding: 0 3rem;
+    }
+    .rental .courtTwo {
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .rental .contex {
+        top: 0;
+        transform: translateX(-100px);
+    }
+    .rental .court #img{
+        left: 3rem;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    /* start of client thoughts  */
+    .thoughts {
+        height: auto;
+    }
+    .message {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 5rem 2rem;
+    }
+    .message .client {
+        width: 500px;
+    }
+    /* start of property Card */
+    .propertyCard {
+        margin: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 975px) {
+ /* start of sign up pop-up  */
+    .signupPopup {
+        left: 5rem;
+        top: 13%;
+    }
+ /* start of login page  */
+    .popUp {
+        transform: translateX(-100px);
+    }
+    /* start of properties section  */
+    .propertiesSection {
+        padding: 12rem  1rem 5rem;
+    }
+    .propertyCard { 
+        width: 100%;
+        padding: 1rem 5rem;
+    }
+    .propertyCard img {
+        width: 650px;
+        height: 500px;
+    } 
+    .details .btn {
+        padding: 2rem 0;
+    }
+    .details .btn a {
+        padding: 10px 30px;
+    }
+    /* stlying of rental section */
+    .rental .court #img{
+        left: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .court .contex {
+        top: 0;
+        margin-left: 4rem;
+    }
+    .essay p {
+        padding: 0 3rem;
+    }
+}
+    
+@media screen and (max-width: 780px) {
+    .propertyCard img {
+        width: 550px;
+    }
+   .message .client {
+        transform: translateX(-150px);
+    }
+    .main .comment {
+        left: 10%;
+        top: 60%;
+        width: 300px;
+    }
+    .main h1 {
+        font-size: 20px;
+    }
+    .main .btn {
+        margin-top: 30px;
+    }
+    .main .btn a {
+        padding: 12px 30px;
+    }
+    
+}
+
+
+
